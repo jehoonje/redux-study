@@ -1,11 +1,8 @@
 import React from 'react';
 import ReduxCounter from './redux-practice/components/ReduxCounter';
 
-const App = () => 
-{
+const App = () => {
 
-
-  
   return (
     <>
       <ReduxCounter />

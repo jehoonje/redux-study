@@ -1,4 +1,2 @@
- ✘ Jehoon 🔑   ~/Desktop/coding/course/react/react-advance202407
- npm install redux react-redux -y
-
-
+- redux install
+`$ npm install redux react-redux -y`

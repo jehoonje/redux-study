@@ -4,11 +4,13 @@ import { createStore } from "redux";
 // 액션 타입 상수
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
-export const MULTIFLY = 'MULTIFLY';
+export const MULTIPLY = 'MULTIPLY';
+export const TOGGLE = 'TOGGLE';
 
 // 관리할 초기 상태값 객체
 const initialCountState  = {
-  counter: 10
+  counter: 10,
+  showCounter: true
 };
 
 
@@ -28,18 +30,28 @@ const counterReducer = (state = initialCountState, action) => {
   switch(action.type) {
     case INCREMENT:
       return {
+        ...state,
         counter: state.counter + 1
       };
       break;
     case DECREMENT:
+      
       return {
+        ...state,
         counter: state.counter - 1
       };
       break;
-    case MULTIFLY:
+    case MULTIPLY:
+      
       return {
+        ...state,
         counter: state.counter * action.payload
       };
+    case TOGGLE:
+      return {
+        ...state,
+        showCounter: !state.showCounter
+      }
     default:
       return state;
   }

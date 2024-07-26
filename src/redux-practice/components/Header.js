@@ -1,10 +1,14 @@
+import { useSelector } from 'react-redux';
 import classes from './Header.module.css';
 
 const Header = () => {
+
+  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+
   return (
     <header className={classes.header}>
       <h1>Redux Auth</h1>
-      <nav>
+      {isLoggedIn && <nav>
         <ul>
           <li>
             <a href='/public'>My Products</a>
@@ -16,7 +20,7 @@ const Header = () => {
             <button>Logout</button>
           </li>
         </ul>
-      </nav>
+      </nav>}
     </header>
   );
 };

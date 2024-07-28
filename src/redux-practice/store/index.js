@@ -11,5 +11,7 @@ const store = configureStore({
   },
 });
 
+
+
 // 리액트의 index.js에게 store를 제공
 export default store;

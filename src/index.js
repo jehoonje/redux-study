@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
-import store from './redux-practice/store/index';
+import store from './redux-cart/store/index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Provider store={store}>
-      <App />
-    </Provider>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
-

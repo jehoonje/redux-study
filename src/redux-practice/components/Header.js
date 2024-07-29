@@ -10,7 +10,7 @@ const Header = () => {
 
   const logoutHandler = e => {
     dispatch(authActions.logout());
-  }
+  };
 
   return (
     <header className={classes.header}>

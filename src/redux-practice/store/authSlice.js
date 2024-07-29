@@ -21,8 +21,6 @@ const authSlice = createSlice({
   }
 });
 
-// 슬라이스 안에 reducers에 정의한 함수들을 내보내기
+
 export const authActions = authSlice.actions;
-
-
 export default authSlice.reducer;

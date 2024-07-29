@@ -45,5 +45,4 @@ const counterSlice = createSlice({
 
 // 슬라이스 안에 reducers에 정의한 함수들을 내보내기
 export const counterActions = counterSlice.actions;
-
 export default counterSlice.reducer;

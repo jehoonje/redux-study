@@ -13,6 +13,10 @@ const CartItem = ({item}) => {
     dispatch(cartActions.addCartItem(item));
   };
 
+  const minusCartHandler = e => {
+    dispatch(cartActions.minusCartItem(item));
+  };
+
   return (
     <li className={styles.item}>
       <header>
@@ -27,7 +31,7 @@ const CartItem = ({item}) => {
           x <span>{quantity}</span>
         </div>
         <div className={styles.actions}>
-          <button>-</button>
+          <button onClick={minusCartHandler}>-</button>
           <button onClick={addCartHandler}>+</button>
         </div>
       </div>
